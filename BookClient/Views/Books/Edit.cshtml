@@ -1,0 +1,21 @@
+<h1>Edit this Book:</h1>
+<form action="/books" method="post">
+  <label for="title">Title</label>
+  <input id="title" name="title" type="text" class="form-control" required>
+  <br>
+  <label for="author">Author</label>
+  <input id="author" name="author" type="text" class="form-control" required>
+  <br>
+  <label for="genre">Genre</label>
+  <input id="genre" name="genre" type="text" class="form-control" required>
+  <br>
+  <label for="rating">Rating</label>
+  <input id="rating" name="rating" type="number" min="1" max="10" class="form-control" required>
+  <br>
+  <label for="read">Check this box if you have read this book: </label>
+  <input id="read" name="read" type="checkbox">
+  <br>
+  <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit!</button>
+</form>
+<br>
+<a href="/books/Details/@Model.BookId" class="btn-outline-secondary btn-block">Return to Book Details</a>

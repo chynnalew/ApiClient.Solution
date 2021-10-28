@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ApiClient.Solution.Models;
+using BookClient.Models;
 
 namespace ApiClient.Solution.Controllers
 {
@@ -20,7 +20,8 @@ namespace ApiClient.Solution.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var allBooks = Book.GetBooks().OrderBy(model => model.Title);
+            return View(allBooks);
         }
 
         public IActionResult Privacy()

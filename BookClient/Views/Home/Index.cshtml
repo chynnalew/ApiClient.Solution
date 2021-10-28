@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using BookClient.Models;
+
+<h1>All Books</h1>
+<hr>
+
+<ul>
+@foreach (Book book in Model)
+{
+    <p><em><strong>@book.Title</strong></em></p>
+    <ul>
+        <li>Author: @book.Author</li>
+        <li>Genre: @book.Genre</li>
+        <li>Rating: @book.Rating/10</li>
+        @if(book.Read == true){
+            <li>TBR: Read!</li>
+        } else {
+            <li>TBR: Not Read</li>
+        }
+    </ul>
+    <br>
+}
+</ul>

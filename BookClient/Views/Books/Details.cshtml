@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Book Info:</h1>
+
+<ul>
+  <li>Author: @Model.Author</li>
+  <li>Genre: @Model.Genre</li>
+  <li>Rating: @Model.Rating/10</li>
+  @if(Model.Read == true){
+    <li>TBR: Read!</li>
+  } else {
+    <li>TBR: Not Read</li>
+  }
+</ul>
+
+<a href="/Books/Edit/@(Model.BookId)" class="btn btn-dark">Edit</a>
+<a href="/Books" class="btn btn-dark">Return</a>
+<a href="/Books/Delete/@(Model.BookId)" class="btn btn-dark">Delete Book</a>

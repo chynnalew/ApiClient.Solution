@@ -1,6 +1,6 @@
 using System;
 
-namespace ApiClient.Solution.Models
+namespace BookClient.Models
 {
     public class ErrorViewModel
     {
